@@ -3,7 +3,7 @@
 */
 
 
-var app = angular.module('app', []);
+var app = angular.module('app', ['ngResource']);
 
 app.run(function ($rootScope) {
 
@@ -12,30 +12,19 @@ app.run(function ($rootScope) {
 });
 
 
-app.controller('PodcastsCtrl', function ($scope, $rootScope) {
+app.factory('store', function($resource) {
+    return {
+        'podcasts': $resource(
+            '/store/podcasts.json',
+            {},
+            { query: { method:'GET', isArray: false } }
+        )
+    };
+});
 
-    $scope.project_name = $rootScope.project_name;
 
-    $scope.podcasts = {
-        "items": [
-            {
-                "label": "Geek Inc",
-                "slug": "geek-inc",
-                "audio": true,
-                "video": true,
-                "live": true,
-                "episodes": 150,
-                "stars": 5
-            },
-            {
-                "label": "Positron",
-                "slug": "positron",
-                "audio": true,
-                "video": false,
-                "live": false,
-                "episodes": 1,
-                "stars": 5
-            }
-        ]
-    }
+app.controller('PodcastsCtrl', function ($scope, store) {
+
+    $scope.podcasts = store.podcasts.query();
+
 });

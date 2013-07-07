@@ -25,7 +25,9 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
-                <a class="brand" href="#">{{ project_name }}</a>
+                <a class="brand" href="#">
+                    {{ project_name }}
+                </a>
                 <div class="nav-collapse collapse">
                     <ul class="nav">
                         <li class="active"><a href="#">Home</a></li>
@@ -42,7 +44,10 @@
         <div class="row" ng-repeat="podcast in podcasts.items">
             <div class="span12">
 
-                <h1>{{ podcast.label }} in {{ project_name }}</h1>
+                <h1>
+                    {{ podcast.label }}
+                    <small>{{ podcast.episodes}} épisodes</small>
+                </h1>
 
             </div>
         </div>
