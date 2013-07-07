@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="">
+<html lang="en" ng-app="app">
 <head>
     <meta charset="utf-8">
     <title>PodcastHub</title>
@@ -37,12 +37,16 @@
 
     <div class="container">
 
-    <div class="row">
-        <div class="span12">
+    <div ng-controller="PodcastsCtrl">
 
+        <div class="row" ng-repeat="podcast in podcasts.items">
+            <div class="span12">
 
+                <h1>{{ podcast.label }} in {{ project_name }}</h1>
 
+            </div>
         </div>
+
     </div>
 
     </div> <!-- /container -->
