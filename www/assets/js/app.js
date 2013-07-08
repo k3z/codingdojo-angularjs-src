@@ -28,3 +28,11 @@ app.controller('PodcastsCtrl', function ($scope, store) {
     $scope.podcasts = store.podcasts.query();
 
 });
+
+app.directive('bsHolder', function() {
+    return {
+        link: function (scope, element, attrs) {
+            Holder.run();
+        }
+    };
+});

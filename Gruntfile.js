@@ -11,6 +11,7 @@ module.exports = function(grunt) {
                     'www/assets/components/angular-resource/angular-resource.min.js',
                     'www/assets/components/angular-ui-bootstrap-bower/ui-bootstrap.min.js',
                     'www/assets/components/angular-ui-bootstrap-bower/ui-bootstrap-tpls.min.js',
+                    'www/assets/components/holderjs/holder.js',
                     'www/assets/js/*.js'
                 ],
                 dest: 'www/assets/build/project.js'

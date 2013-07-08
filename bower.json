@@ -6,6 +6,7 @@
         "angular": "1.0.7",
         "angular-i18n": "1.0.7",
         "angular-resource": "1.0.x",
-        "angular-ui-bootstrap-bower": "0.2.x"
+        "angular-ui-bootstrap-bower": "0.2.x",
+        "holderjs": "1.9.x"
     }
 }
