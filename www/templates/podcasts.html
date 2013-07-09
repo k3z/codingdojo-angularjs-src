@@ -22,7 +22,7 @@
                 <a href="#/podcast/{{ podcast.slug }}">
                     <img data-src="holder.js/209x126/text:cover" alt="209x126" bs-holder>
                     <div class="caption">
-                        <strong>{{ podcast.label }}</strong>
+                        <strong>{{ podcast.label | truncate:30 }}</strong>
                         <br>
                         <small>
                             {{ podcast.episodes }} épisodes

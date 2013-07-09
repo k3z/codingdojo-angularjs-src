@@ -3,7 +3,7 @@
 */
 
 
-var app = angular.module('app', ['ngResource']);
+var app = angular.module('app', ['ngResource', 'customFilters']);
 
 app.run(function ($rootScope) {
 
@@ -30,6 +30,24 @@ app.factory('store', function($resource) {
     };
 });
 
+angular.module('customFilters', []).
+    filter('truncate', function () {
+        return function (text, length, end) {
+            if (isNaN(length))
+                length = 10;
+
+            if (end === undefined)
+                end = "...";
+
+            if (text.length <= length || text.length - end.length <= length) {
+                return text;
+            }
+            else {
+                return String(text).substring(0, length-end.length) + end;
+            }
+
+        };
+    });
 
 app.controller('PodcastsCtrl', function ($scope, store) {
 
