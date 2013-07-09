@@ -7,12 +7,17 @@
     <div class="span9">
     </div>
     <div class="span3">
-
+        <form class="form-search">
+            <input
+            placeholder="Filtrer"
+            ng-model="searchPodcast"
+            type="text" class="input-medium search-query">
+        </form>
     </div>
 </div>
 <div class="row">
     <ul class="thumbnails">
-        <li class="span3" ng-repeat="podcast in podcasts.items">
+        <li class="span3" ng-repeat="podcast in podcasts.items | orderBy:'label' | filter:searchPodcast">
             <div class="thumbnail">
                 <a href="#/podcast/{{ podcast.slug }}">
                     <img data-src="holder.js/209x126/text:cover" alt="209x126" bs-holder>
