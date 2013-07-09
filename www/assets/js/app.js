@@ -35,7 +35,7 @@ app.directive('podcasts', function() {
         'scope': {
             'podcasts': '=' // & | = | &
         },
-        templateUrl: 'podcasts.html'
+        templateUrl: 'templates/podcasts.html'
     };
 });
 
