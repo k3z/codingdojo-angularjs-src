@@ -12,6 +12,14 @@ app.run(function ($rootScope) {
 });
 
 
+app.config(function ($routeProvider) {
+    $routeProvider
+        .when('/', {
+            'templateUrl': 'templates/podcasts.html',
+            'controller': 'PodcastsCtrl'
+        });
+});
+
 app.factory('store', function($resource) {
     return {
         'podcasts': $resource(
@@ -33,7 +41,7 @@ app.directive('podcasts', function() {
     return {
         'restrict': 'E', // E | C | A
         'scope': {
-            'podcasts': '=' // & | = | &
+            'podcasts': '=' // @ | = | &
         },
         templateUrl: 'templates/podcasts.html'
     };
