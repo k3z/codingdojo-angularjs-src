@@ -29,6 +29,16 @@ app.controller('PodcastsCtrl', function ($scope, store) {
 
 });
 
+app.directive('podcasts', function() {
+    return {
+        'restrict': 'E', // E | C | A
+        'scope': {
+            'podcasts': '=' // & | = | &
+        },
+        templateUrl: 'podcasts.html'
+    };
+});
+
 app.directive('bsHolder', function() {
     return {
         link: function (scope, element, attrs) {

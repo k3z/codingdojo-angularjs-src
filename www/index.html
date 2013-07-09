@@ -37,40 +37,46 @@
         </div>
     </div>
 
-    <div class="container" ng-controller="PodcastsCtrl">
+    <div class="container">
 
-    <div class="row">
-        <div class="span12">
-            <h1>Dernières publications</h1>
+        <script type="text/ng-template" id="podcasts.html">
+        <div class="row">
+            <div class="span12">
+                <h1>Dernières publications</h1>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="span9">
-        </div>
-        <div class="span3">
+        <div class="row">
+            <div class="span9">
+            </div>
+            <div class="span3">
 
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <ul class="thumbnails">
-            <li class="span3"ng-repeat="podcast in podcasts.items">
-                <div class="thumbnail">
-                    <a href="#">
-                        <img data-src="holder.js/209x126/text:cover" alt="209x126" bs-holder>
-                        <div class="caption">
-                            <strong>{{ podcast.label }}</strong>
-                            <br>
-                            <small>
-                                {{ podcast.episodes }} épisodes
-                                <i ng-show="podcast.audio" class="icon icon-headphones"></i>
-                                <i ng-show="podcast.video" class="icon icon-eye-open"></i>
-                            </small>
-                        </div>
-                    </a>
-                </div>
-            </li>
-        </ul>
-    </div>
+        <div class="row">
+            <ul class="thumbnails">
+                <li class="span3" ng-repeat="podcast in podcasts.items">
+                    <div class="thumbnail">
+                        <a href="#/podcast/{{ podcast.slug }}">
+                            <img data-src="holder.js/209x126/text:cover" alt="209x126" bs-holder>
+                            <div class="caption">
+                                <strong>{{ podcast.label }}</strong>
+                                <br>
+                                <small>
+                                    {{ podcast.episodes }} épisodes
+                                    <i ng-show="podcast.audio" class="icon icon-headphones"></i>
+                                    <i ng-show="podcast.video" class="icon icon-eye-open"></i>
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        </script>
+
+        <div ng-controller="PodcastsCtrl">
+            <podcasts podcasts="podcasts"></podcasts>
+        </div>
 
     </div> <!-- /container -->
     <script type="text/javascript" src="assets/build/project.js"></script>
