@@ -1,0 +1,80 @@
+{
+    "label": "Geek Inc",
+    "baseline": "On partage la culture Geek !",
+    "description": "Geek Inc, le podcast qui partage la culture geek! Comics, cinéma, jeux vidéos, high tech,… Cédric, Audrey, Timothée, Sophie et Christophe partagent avec passion leurs découvertes 100% geek. Soyez fiers d’être geeks!",
+    "type": "video",
+    "episodes": [
+        {
+            "released_at": "2013-05-27 18:23:00",
+            "number": 150,
+            "duration": "",
+            "label": "Geek Inc Podcast 150 : Objectif de productivité en LIVE",
+            "summary": "Numéro exceptionnellement long car le prochain sera peut être décalé d’une semaine… En attendant au sommaire de ce numéro, du high tech, des jeux, un livre, de la bd et le tout en live !",
+            "team": []
+        },
+        {
+            "released_at": "2013-05-16 17:58:00",
+            "number": 149,
+            "duration": "",
+            "label": "Geek Inc Podcast 149 : Vos amis Facebook sont vraiment vos amis ?",
+            "summary": "Au sommaire de ce numéro en petit comité (certains font le pont…) et pour cet épisode moins «complet» on vous parle de règle numérique, de psychopathe, de comics gratos, du chien toto et de Chris Jesus ce punk…",
+            "team": []
+        },
+        {
+            "released_at": "2013-04-29 17:10:00",
+            "number": 148,
+            "duration": "",
+            "label": "Geek Inc Podcast 148 : Y a du fer dans le sang !",
+            "summary": "Au sommaire de ce numéro, du gore, de l'humour potache, des superhéros, des zombies, du matos pour faire pousser des plantes (des mini tomates, des fraises, des herbes aromatiques…), des singes dans le cloud et j'en passe !",
+            "team": []
+        },
+        {
+            "released_at": "2013-04-13 21:04:00",
+            "number": 147,
+            "duration": "",
+            "label": "Geek Inc Podcast 147 : La Pebble pour aller danser !",
+            "summary": "Dans ce numéro de Geek Inc la montre Pebble est enfin là ! Un peu de nexus 4, du comics avec l'attendu SAGA, du manga, du jeu vidéo avec un gros morceau sur Eve Online et un invité : Jeff du Meuporg Show…",
+            "team": []
+        },
+        {
+            "released_at": "2013-03-26 09:01:00",
+            "number": 146,
+            "duration": "",
+            "label": "Geek Inc Podcast 146 : Lara Craft",
+            "summary": "Dans ce numéro de Geek Inc des technos qui finissent en o, Westeros retourne à l'école, Lara prend le bateau, des elfes bleus (je n'y crois pas c'est merveilleeeuuuuux) et des motards de l'espace…",
+            "team": []
+        }
+    ],
+    "stars": 5,
+    "author": "Cédric Bonnet",
+    "team": [
+        {
+            "name": "Cédric Bonnet",
+            "twitter": "@cedricbonnet"
+        },
+        {
+            "name": "Audrey Singh",
+            "twitter": "@linilim"
+        },
+        {
+            "name": "Sophie",
+            "twitter": "@season1"
+        },
+        {
+            "name": "Timothée Graveline",
+            "twitter": "@abrutim"
+        },
+        {
+            "name": "Christophe",
+            "twitter": "@chrisgaijintv"
+        },
+        {
+            "name": "Julien",
+            "twitter": "@julien_geekinc"
+        },
+        {
+            "name": "Cédric Mercet",
+            "twitter": "@geeknessfr"
+        }
+    ]
+}

@@ -17,13 +17,23 @@ app.config(function ($routeProvider) {
         .when('/', {
             'templateUrl': 'templates/podcasts.html',
             'controller': 'PodcastsCtrl'
+        })
+        .when('/podcast/:slug', {
+            'templateUrl': 'templates/podcast.html',
+            'controller': 'PodcastCtrl'
         });
+
 });
 
 app.factory('store', function($resource) {
     return {
         'podcasts': $resource(
             '/store/podcasts.json',
+            {},
+            { query: { method:'GET', isArray: false } }
+        ),
+        'podcast': $resource(
+            '/store/podcast.json',
             {},
             { query: { method:'GET', isArray: false } }
         )
@@ -55,6 +65,12 @@ app.controller('PodcastsCtrl', function ($scope, store) {
 
 });
 
+app.controller('PodcastCtrl', function ($scope, store) {
+
+    $scope.podcast = store.podcast.query();
+
+});
+
 app.directive('podcasts', function() {
     return {
         'restrict': 'E', // E | C | A
@@ -62,6 +78,16 @@ app.directive('podcasts', function() {
             'podcasts': '=' // @ | = | &
         },
         templateUrl: 'templates/podcasts.html'
+    };
+});
+
+app.directive('podcast', function() {
+    return {
+        'restrict': 'E',
+        'scope': {
+            'podcast': '@'
+        },
+        templateUrl: 'podcast.html'
     };
 });
 
